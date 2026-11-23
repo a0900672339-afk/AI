@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>墨韻 / InkVision — 2D 數位藝術與概念原畫個人作品集</title>
+<!-- Google Fonts: Noto Serif TC and Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif+TC:wght@300;400;500;600;700;900&amp;family=Noto+Serif:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#ffb3ae",
+            "secondary": "#4a607a",
+            "on-secondary-container": "#4d637d",
+            "surface-tint": "#ac3233",
+            "on-secondary-fixed-variant": "#324861",
+            "outline-variant": "#dfbfbd",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#6b675c",
+            "surface-container-low": "#f6f3f2",
+            "on-error-container": "#93000a",
+            "secondary-container": "#c8dffe",
+            "on-primary": "#ffffff",
+            "tertiary": "#524f45",
+            "inverse-primary": "#ffb3ae",
+            "on-surface": "#1b1c1c",
+            "outline": "#8c716f",
+            "background": "#fcf9f8",
+            "surface-container": "#f0eded",
+            "surface-container-highest": "#e5e2e1",
+            "tertiary-fixed-dim": "#ccc6b9",
+            "on-error": "#ffffff",
+            "primary-container": "#b83b3b",
+            "on-tertiary-fixed-variant": "#4a473d",
+            "on-background": "#1b1c1c",
+            "on-surface-variant": "#584140",
+            "inverse-on-surface": "#f3f0ef",
+            "surface": "#fcf9f8",
+            "on-tertiary-fixed": "#1e1c13",
+            "surface-container-high": "#eae7e7",
+            "tertiary-fixed": "#e8e2d5",
+            "on-tertiary-container": "#ede6d9",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#8b191e",
+            "inverse-surface": "#303030",
+            "on-tertiary": "#ffffff",
+            "surface-dim": "#dcd9d9",
+            "on-primary-container": "#ffe0dd",
+            "primary": "#972226",
+            "surface-bright": "#fcf9f8",
+            "secondary-fixed-dim": "#b2c8e6",
+            "secondary-fixed": "#d1e4ff",
+            "on-secondary": "#ffffff",
+            "primary-fixed": "#ffdad7",
+            "on-secondary-fixed": "#031d34",
+            "on-primary-fixed": "#410005",
+            "surface-variant": "#e5e2e1"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "margin-desktop": "4rem",
+            "margin": "1.25rem",
+            "gutter": "1.5rem",
+            "gutter-desktop": "2.5rem",
+            "space-md": "1rem",
+            "space-xl": "3rem",
+            "space-lg": "1.75rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Noto Serif TC", "Noto Serif", "serif"],
+            "headline-lg": ["Noto Serif TC", "Noto Serif", "serif"],
+            "title-md": ["Noto Serif TC", "Noto Serif", "serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "display": ["Noto Serif TC", "Noto Serif", "serif"],
+            "headline-lg-mobile": ["Noto Serif TC", "Noto Serif", "serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "display-mobile": ["Noto Serif TC", "Noto Serif", "serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "0.01em", "fontWeight": "500" }],
+            "headline-lg": ["2.25rem", { "lineHeight": "3rem", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "title-md": ["1.125rem", { "lineHeight": "1.75rem", "letterSpacing": "0.01em", "fontWeight": "500" }],
+            "label-md": ["0.8125rem", { "lineHeight": "1.125rem", "letterSpacing": "0.06em", "fontWeight": "500" }],
+            "display": ["3.5rem", { "lineHeight": "4.25rem", "letterSpacing": "0.04em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "body-lg": ["1.125rem", { "lineHeight": "1.875rem", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "display-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "label-sm": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "body-md": ["0.9375rem", { "lineHeight": "1.625rem", "letterSpacing": "0em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .writing-vertical {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+    .seal-stamp {
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    }
+    /* Xuan paper delicate grain simulation */
+    .paper-texture {
+      background-color: #FAF9F6;
+      background-image: radial-gradient(rgba(32, 32, 32, 0.02) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="paper-texture text-on-surface bg-surface min-h-screen antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar (Shared Component JSON Conformance) -->
+<header class="fixed top-0 left-0 right-0 z-50 w-full bg-surface/85 backdrop-blur-md border-b border-outline-variant/40">
+<div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
+<!-- Brand Logo & Seal Stamp -->
+<a class="flex items-center gap-3.5 group" href="#">
+<div class="w-9 h-9 bg-primary text-on-primary flex items-center justify-center rounded seal-stamp transition-transform duration-300 group-hover:scale-95">
+<span class="font-headline-md text-sm font-bold tracking-tighter">墨印</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md tracking-wider text-on-surface font-medium leading-tight">
+            墨韻 / InkVision
+          </span>
+<span class="font-label-sm text-[0.6rem] tracking-[0.2em] text-tertiary uppercase">2D Visual Concept Art</span>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-9 font-label-md text-label-md uppercase tracking-widest">
+<!-- Active link: 精選作品 Works -->
+<a class="text-primary font-medium relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary after:rounded-full" href="#works">
+          精選作品 Works
+        </a>
+<a class="text-on-surface-variant font-normal tracking-widest hover:text-on-surface transition-colors duration-200" href="#skills">
+          專業歷程 Skills
+        </a>
+<a class="text-on-surface-variant font-normal tracking-widest hover:text-on-surface transition-colors duration-200" href="#about">
+          關於我 About
+        </a>
+<a class="text-on-surface-variant font-normal tracking-widest hover:text-on-surface transition-colors duration-200" href="#contact">
+          聯絡方式 Contact
+        </a>
+</nav>
+<!-- Trailing Primary Action & Icon Actions -->
+<div class="flex items-center gap-4">
+<!-- Trailing Icon Action: translate -->
+<button aria-label="切換語系" class="p-2 text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center" title="語言切換" type="button">
+<span class="material-symbols-outlined text-[20px]">translate</span>
+</button>
+<!-- Trailing Icon Action: dark_mode -->
+<button aria-label="切換外觀模式" class="p-2 text-on-surface-variant hover:text-primary transition-colors duration-200 flex items-center" id="theme-toggle" title="外觀調節" type="button">
+<span class="material-symbols-outlined text-[20px]">dark_mode</span>
+</button>
+<!-- Trailing Primary Action: 合作邀約 -->
+<a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 bg-primary text-on-primary font-label-md text-label-md rounded border border-primary hover:bg-primary-container transition-all duration-300 ease-out active:scale-95 shadow-sm" href="#contact">
+          合作邀約
+        </a>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- HERO SECTION (主視覺區) -->
+<section class="relative min-h-[calc(100vh-5rem)] flex items-center border-b border-outline-variant/30 overflow-hidden py-16 md:py-24">
+<!-- Ambient ink wash backdrop element -->
+<div class="absolute -right-32 top-10 w-96 h-96 bg-surface-container rounded-full blur-3xl pointer-events-none opacity-60"></div>
+<div class="absolute left-1/4 -bottom-20 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Content Area (Columns 1-7) -->
+<div class="lg:col-span-7 flex flex-col justify-center">
+<!-- Editorial Rubric Tag -->
+<div class="flex items-center gap-3 mb-6">
+<span class="inline-flex items-center px-2.5 py-1 bg-surface-container-high border border-outline-variant/50 text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase rounded">
+              2D Concept Artist &amp; Illustrator
+            </span>
+<span class="w-8 h-[1px] bg-outline-variant"></span>
+<span class="font-title-md text-sm text-secondary tracking-widest">個人數位畫廊 2025</span>
+</div>
+<!-- Main Poetic Headline -->
+<div class="flex items-start gap-6">
+<!-- Vertical Poetic Accent Line -->
+<div class="hidden sm:block writing-vertical font-title-md text-tertiary text-sm tracking-[0.35em] border-l border-outline-variant/60 pl-3 pt-2 text-right">
+              松煙墨韻 ‧ 意境留白
+            </div>
+<div>
+<h1 class="font-headline-lg md:font-display text-headline-lg md:text-display text-on-surface tracking-wide mb-6 leading-tight">
+                以筆墨與數位，<br class="hidden sm:inline"/>勾勒 <span class="text-primary italic font-headline-md">2D 視界</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed mb-10">
+                專注於 2D 數位插畫、角色原畫設定與世界觀概念設計。融合東方留白意境與現代數位美術，以精煉線稿與沉穩色調構築詩性世界。
+              </p>
+<!-- Dual CTAs -->
+<div class="flex flex-wrap items-center gap-4 mb-12">
+<a class="px-8 py-3.5 bg-inverse-surface text-on-primary font-label-md text-label-md rounded border border-inverse-surface hover:border-primary transition-all duration-300 shadow-sm flex items-center gap-2 group" href="#works">
+<span>查看精選作品</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="px-8 py-3.5 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded border border-outline-variant/70 hover:border-secondary hover:text-secondary transition-all duration-300 flex items-center gap-2" href="#contact">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>下載簡歷 Resume</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Key Metrics Ribbon -->
+<div class="pt-8 border-t border-outline-variant/40 grid grid-cols-3 gap-6 max-w-lg">
+<div>
+<div class="font-headline-md text-headline-md text-primary font-bold">8+</div>
+<div class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider mt-0.5">年美術資歷</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-secondary font-bold">50+</div>
+<div class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider mt-0.5">商業項目合作</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">3<span class="text-sm font-normal">次</span></div>
+<div class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider mt-0.5">國際插畫入圍</div>
+</div>
+</div>
+</div>
+<!-- Right Visual Centerpiece (Columns 8-12) -->
+<div class="lg:col-span-5 relative">
+<!-- Aesthetic Border Canvas Mount -->
+<div class="relative p-3 bg-surface-container-lowest border border-outline-variant/60 rounded shadow-[0_4px_24px_rgba(0,0,0,0.03)]">
+<div class="relative overflow-hidden aspect-[4/5] bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-105" data-alt="A masterwork 2D digital concept painting of a graceful warrior standing atop a misty mountain pavilion at twilight. The style is modern East Asian fantasy with exquisite ink brush textures and clean digital rendering. Soft cyan twilight illuminates the background while vermilion red fabric flutters against deep pine charcoal shadows. The lighting is diffused and ethereal, exuding tranquil dignity and artistic balance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwONJFuTvpY7JTzb3vNMNxQqLp6gJEUyHrx8gxpi8QqvXSweM1VKhluzsK9-k8MCu1rLUNLrIN086AJHoMwLDxIGErm0tezcVPOVVq_9Qh8HNfmQR_LYXgj0WN729EPHiyKJUme6ljcxs5vudq5Gx2Bfwt6ZzshBASzoOLaVYfS9ZPaMnpmpdzT52a-lAi9ep9s0fn-kpJoYRGgZEHlaPuCRZBXX-YmInggmzWQw"/>
+<!-- Subtle Ink Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+<!-- Artwork Seal Stamp Inset Badge -->
+<div class="absolute top-4 right-4 bg-primary/95 text-on-primary px-2.5 py-3 rounded seal-stamp flex flex-col items-center">
+<span class="font-headline-md text-xs font-semibold leading-tight writing-vertical tracking-widest">
+                  墨韻原創
+                </span>
+<span class="w-1.5 h-1.5 rounded-full bg-white/70 mt-2"></span>
+</div>
+<!-- Artwork Caption Overlay -->
+<div class="absolute bottom-4 left-4 right-4 text-on-primary">
+<div class="font-label-sm text-xs text-primary-fixed tracking-widest uppercase mb-1">Concept Series #01</div>
+<div class="font-title-md text-base font-medium">《雲境孤客》‧ 世界觀氛圍稿</div>
+</div>
+</div>
+<!-- Framing hairline annotations -->
+<div class="mt-3 flex items-center justify-between text-tertiary px-1">
+<span class="font-label-sm text-[0.65rem] tracking-widest">FIG. 2024-C09 // MATTE &amp; CHARACTER</span>
+<span class="font-label-sm text-[0.65rem] tracking-wider font-mono">100% ORIGINAL DESIGN</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURED WORKS (精選作品畫廊) -->
+<section class="py-24 max-w-7xl mx-auto px-6 md:px-12 border-b border-outline-variant/30" id="works">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-widest mb-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Portfolio Showcase
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+            精選作品 <span class="text-tertiary font-normal text-headline-md">/ Featured Works</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-xl">
+            收錄近年原創系列與商業委託之角色立繪、場景原畫與世界觀構圖，展現細緻線條與氛圍光影。
+          </p>
+</div>
+<!-- Filter Tab Buttons -->
+<div class="flex flex-wrap items-center gap-2 p-1.5 bg-surface-container-low border border-outline-variant/40 rounded">
+<button class="filter-btn active px-4 py-1.5 font-label-md text-label-md rounded bg-surface-container-lowest text-primary shadow-sm border border-outline-variant/30 transition-all duration-200" data-filter="all">
+            全部 <sup class="text-[10px] text-tertiary ml-0.5">06</sup>
+</button>
+<button class="filter-btn px-4 py-1.5 font-label-md text-label-md rounded text-on-surface-variant hover:text-on-surface transition-all duration-200" data-filter="character">
+            角色設計 <sup class="text-[10px] text-tertiary ml-0.5">03</sup>
+</button>
+<button class="filter-btn px-4 py-1.5 font-label-md text-label-md rounded text-on-surface-variant hover:text-on-surface transition-all duration-200" data-filter="concept">
+            概念原畫 <sup class="text-[10px] text-tertiary ml-0.5">02</sup>
+</button>
+<button class="filter-btn px-4 py-1.5 font-label-md text-label-md rounded text-on-surface-variant hover:text-on-surface transition-all duration-200" data-filter="illustration">
+            數位插畫 <sup class="text-[10px] text-tertiary ml-0.5">01</sup>
+</button>
+</div>
+</div>
+<!-- Gallery Grid: 6 Works (Bento & Masonry feel with 1px fine borders) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+<!-- Artwork Card 1 -->
+<article class="art-card group bg-surface-container-lowest border border-outline-variant/50 rounded overflow-hidden transition-all duration-300 hover:border-outline cursor-pointer" data-category="character" onclick="openLightbox(0)">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An intricate 2D character concept art illustration of an elegant female swordsman dressed in modern techwear blended with traditional Hanfu silhouette. Crisp digital ink linework defines her charcoal-hued embroidered robes and translucent cyan cape. Ambient soft white studio lighting illuminates her determined facial expression with selective crimson ribbon details. Highly refined modern anime concept aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxHkcTl8CElQMvPhhldxREVOIZmeAPpDMv7KPcu45bFbaf6aJqTuZV0X7ollGgbXxMa634I7rOy-WWVDz3lWjLOW-TV6xffbjg6ndsEnrjP3JVUStjuDRlu3dfAtyyH9jUMA9kTBOA9KywnrnmpDiAk2YaftjQzMgitgHkd-X34fXR-yE1RTYF_mx9j0S7pipl9GqxXYJpP1m54VP42XPtX9MP1qhW1u08Va992w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-sm text-xs text-primary-fixed-dim uppercase tracking-wider mb-1">Character Concept</span>
+<h3 class="font-title-md text-title-md text-on-primary">《鶴歸錄》‧ 劍隱青翎</h3>
+<p class="font-body-md text-xs text-on-primary/80 line-clamp-2 mt-1">手遊主角原案設定，兼顧角色動態輪廓與服飾刺繡層次。</p>
+</div>
+</div>
+<div class="p-5 flex items-center justify-between border-t border-outline-variant/30">
+<div>
+<div class="font-title-md text-base text-on-surface font-medium">《鶴歸錄》‧ 劍隱青翎</div>
+<div class="font-label-sm text-xs text-tertiary mt-0.5">2024 · 角色立繪設定</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-[0.65rem] rounded">CSP</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-[0.65rem] rounded">PS</span>
+</div>
+</div>
+</article>
+<!-- Artwork Card 2 -->
+<article class="art-card group bg-surface-container-lowest border border-outline-variant/50 rounded overflow-hidden transition-all duration-300 hover:border-outline cursor-pointer" data-category="concept" onclick="openLightbox(1)">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Vast cinematic concept matte painting depicting ancient floating Taoist pagodas surrounded by rolling sea of clouds in a monochrome ink wash palette. Gentle amber sunbeams break through pine smoke gray mist, casting realistic shadows over aged stone courtyards. Subtle hints of deep indigo water reflections and cinnabar red architectural pillars. Atmospheric sense of serenity and infinite scale." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD28ZBMbYLnDJyOZCBHnO3qtTymiRPjA8y1xG7nJxYK0zu9JZNEgtVPrI6yv-tySfx1VCW8Zmc-gT_v3ViFTLQSfMWk-NAsJrxKUBC6-xWnvUnNRiiENQRgUobnGZEZi0NRN1fheTfdAWgCEm5Dg8FLXNNsAwwLrgcpBMfM9UiFbWO-AWuZBoQPJM8T4DjxgayDcMmWIiVffxKO1RJbuLd9gLIV3XvSmIepnM5ddQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-sm text-xs text-primary-fixed-dim uppercase tracking-wider mb-1">Environment Matte</span>
+<h3 class="font-title-md text-title-md text-on-primary">《懸闕行》‧ 雲中觀瀾</h3>
+<p class="font-body-md text-xs text-on-primary/80 line-clamp-2 mt-1">仙俠世界觀概念場景，探索留白與宏大建築尺度的均衡。</p>
+</div>
+</div>
+<div class="p-5 flex items-center justify-between border-t border-outline-variant/30">
+<div>
+<div class="font-title-md text-base text-on-surface font-medium">《懸闕行》‧ 雲中觀瀾</div>
+<div class="font-label-sm text-xs text-tertiary mt-0.5">2024 · 世界觀概念</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-[0.65rem] rounded">Blender</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-[0.65rem] rounded">PS</span>
+</div>
+</div>
+</article>
+<!-- Artwork Card 3 -->
+<article class="art-card group bg-surface-container-lowest border border-outline-variant/50 rounded overflow-hidden transition-all duration-300 hover:border-outline cursor-pointer" data-category="illustration" onclick="openLightbox(2)">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A narrative 2D digital cover illustration featuring a contemplative scholar seated by a moonlit window overlooking an autumn bamboo grove. Hand-painted brush textures combined with crisp digital vector refinement. Cool indigo moonlight washes over warm parchment paper on the desk, with an authentic vermilion red ink stone serving as a vibrant focal point. High-end art exhibition cover quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtvx16alAw5kZfqI_oSON9xtdyqTkEWJ4oMLW7DWlS-UdKMjdVxQsUNZO8AJzL1usZcWmDJXl4Dps2DDjRQEHq_T1otPgNzimjABPKBDNEIAnwRjGQXuPqIY6xKFARMxKBhqLQNsnpv3b9sY9zaEeympLXYQoz77tu7c-3y2SbftIA0eH6YHzFRZgytavwLbaXAab0HnSylhbs7ihIVqij8O_c4-nmAEuIdSuVRg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-sm text-xs text-primary-fixed-dim uppercase tracking-wider mb-1">Cover Illustration</span>
+<h3 class="font-title-md text-title-md text-on-primary">《秋窗讀易圖》‧ 詩意典藏</h3>
+<p class="font-body-md text-xs text-on-primary/80 line-clamp-2 mt-1">個人出版畫集主視覺插圖，融會古典工筆設色與現代構圖。</p>
+</div>
+</div>
+<div class="p-5 flex items-center justify-between border-t border-outline-variant/30">
+<div>
+<div class="font-title-md text-base text-on-surface font-medium">《秋窗讀易圖》‧ 詩意典藏</div>
+<div class="font-label-sm text-xs text-tertiary mt-0.5">2023 · 畫冊封面插畫</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-[0.65rem] rounded">Procreate</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-[0.65rem] rounded">PS</span>
+</div>
+</div>
+</article>
+<!-- Artwork Card 4 -->
+<article class="art-card group bg-surface-container-lowest border border-outline-variant/50 rounded overflow-hidden transition-all duration-300 hover:border-outline cursor-pointer" data-category="character" onclick="openLightbox(3)">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Full body 2D anime game character sheet depicting a cybernetic exorcist maiden with dual spirit talismans. Clean ink line art with muted slate grey and cream robes contrasted by bright crimson spell markings and deep navy hair. The presentation is organized on warm aged paper background with detailed accessory sketches and weapon breakdowns in the peripheral space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByeZRS4z-F_uIgOT41T1VlFCxNwThUHBKoOFsI8DtCc6qKx1jhveF-8KnFnfm3VFSDDenmHsqirciD47ehT2qBtezEB6GvZncv9Y2QYKaBA3Xo14zcMnDZk7_C9GqtR4CDU-roK9oE-ajcsYDZCLpSIX-ctJosjmBNfTxbspqUl9ilF7MQFCEaG5jmZJEQz6ZeFC6dKMboY8WX6jB7zGyXb4sq_QJBYDPXI8VU7w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-sm text-xs text-primary-fixed-dim uppercase tracking-wider mb-1">Turnaround &amp; Sheet</span>
+<h3 class="font-title-md text-title-md text-on-primary">《機神封魔》‧ 巫祝靈樞</h3>
+<p class="font-body-md text-xs text-on-primary/80 line-clamp-2 mt-1">商業角色三視圖與武器符文設定，精準呈現量產模型所需規範。</p>
+</div>
+</div>
+<div class="p-5 flex items-center justify-between border-t border-outline-variant/30">
+<div>
+<div class="font-title-md text-base text-on-surface font-medium">《機神封魔》‧ 巫祝靈樞</div>
+<div class="font-label-sm text-xs text-tertiary mt-0.5">2023 · 角色三視設定</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-[0.65rem] rounded">CSP</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-[0.65rem] rounded">AI</span>
+</div>
+</div>
+</article>
+<!-- Artwork Card 5 -->
+<article class="art-card group bg-surface-container-lowest border border-outline-variant/50 rounded overflow-hidden transition-all duration-300 hover:border-outline cursor-pointer" data-category="concept" onclick="openLightbox(4)">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Epic wide concept illustration of an abandoned sunken shrine submerged under bioluminescent jade green water. Stone torii gates and weathered lion statues draped in algae glow faintly under filtered sunlight. A solitary diver in vintage brass gear navigates the underwater ruins. High detail mood lighting with deep shadows and soft caustics creating serene mystery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdiqs88-q14g30NrXORLh5uImQTfKgvK6CLvR5qB8VKIX7g8SCCziLSIAPnuZPqdpXhb1OM4h6uYnLonztzRHGqsHb5EjbovZhTJ3RuSebCoew8z2lxYPIzwtXUyrroVIteY0ehO70zuA-A1KgwGK5WT5bxXTJ3xyHcj086kauzQm6DZGJwuCZK5AC7Wfy4iye5u-eHePPw4QDJHcVAOCJWRJZqL_vK7pzQH5xGw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-sm text-xs text-primary-fixed-dim uppercase tracking-wider mb-1">Worldbuilding Concept</span>
+<h3 class="font-title-md text-title-md text-on-primary">《碧淵遺廟》‧ 水下神域</h3>
+<p class="font-body-md text-xs text-on-primary/80 line-clamp-2 mt-1">探索水下幽微光影與沈浸式世界觀，注重層次景深營造。</p>
+</div>
+</div>
+<div class="p-5 flex items-center justify-between border-t border-outline-variant/30">
+<div>
+<div class="font-title-md text-base text-on-surface font-medium">《碧淵遺廟》‧ 水下神域</div>
+<div class="font-label-sm text-xs text-tertiary mt-0.5">2023 · 世界觀概念</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-[0.65rem] rounded">PS</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-[0.65rem] rounded">Procreate</span>
+</div>
+</div>
+</article>
+<!-- Artwork Card 6 -->
+<article class="art-card group bg-surface-container-lowest border border-outline-variant/50 rounded overflow-hidden transition-all duration-300 hover:border-outline cursor-pointer" data-category="character" onclick="openLightbox(5)">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Expressive 2D concept illustration of a celestial archer perched on an ancient gnarled pine branch against a silver moonlit night sky. The archer wears a fitted raven-feathered tunic with cinnabar arm wraps, drawing an arrow made of pure radiant light. Delicate ink splatters suggest wind and dynamic tension. Harmonious interplay of charcoal darks and luminous whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOMfvDXPN8cHtaGejsO9YazZanqdWv37qVoTN6pkZ6VNGM0nFVoJFIigL1e3R9Fwf4B2rx54gwqODhZyIzV56LbQPLF3IfnW4PQx0gAxTkL8q2y0KTg-xG6R6e38lKQIQZtlWjoymdm_9vhATTmjRuCuoKKjT-YijXipkzWZCFKTG4wqvZh1bl5p6wKqE9RAMM-o5oZo94izuAQlnjbSwhu5jxMhzfmKEgrlxEcQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="font-label-sm text-xs text-primary-fixed-dim uppercase tracking-wider mb-1">Key Art Illustration</span>
+<h3 class="font-title-md text-title-md text-on-primary">《月弧破陣》‧ 宿命夜獵</h3>
+<p class="font-body-md text-xs text-on-primary/80 line-clamp-2 mt-1">動態構圖與張力光效示範，強調瞬間動勢與墨點飛濺質感。</p>
+</div>
+</div>
+<div class="p-5 flex items-center justify-between border-t border-outline-variant/30">
+<div>
+<div class="font-title-md text-base text-on-surface font-medium">《月弧破陣》‧ 宿命夜獵</div>
+<div class="font-label-sm text-xs text-tertiary mt-0.5">2022 · 商業宣傳主視覺</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-[0.65rem] rounded">CSP</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant font-label-sm text-[0.65rem] rounded">PS</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- ABOUT & SKILLS MATRIX (專業歷程與技能樹) -->
+<section class="py-24 max-w-7xl mx-auto px-6 md:px-12 border-b border-outline-variant/30" id="skills">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left: Personal Philosophy & Domains (Columns 1-5) -->
+<div class="lg:col-span-5" id="about">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-widest mb-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Artist Profile &amp; Philosophy
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">
+            筆墨氣韻，<br/>構於數位方寸之間
+          </h2>
+<div class="prose text-on-surface-variant font-body-md text-body-md leading-relaxed space-y-4 mb-8">
+<p>
+              我是 InkVision，一名擁有 8 年以上經驗的 2D 數位概念原畫師與插畫家。我的創作核心源於對東方水墨「留白」哲學的敬畏，並將其與當代次世代電玩美術、動漫審美與世界觀設定無縫接軌。
+            </p>
+<p>
+              我深信一張出色的原畫不僅在於精確的人體結構與炫目的色彩，更在於空氣感與情感氛圍的傳遞。在商業專案中，我善於提供可落地的設計方案，同時兼顧美術獨特性與量產可執行度。
+            </p>
+</div>
+<!-- 4 Core Domains Bento Cards -->
+<div class="grid grid-cols-2 gap-3 mb-8">
+<div class="p-4 bg-surface-container-low border border-outline-variant/40 rounded">
+<div class="text-primary mb-2">
+<span class="material-symbols-outlined text-[24px]">brush</span>
+</div>
+<div class="font-title-md text-sm font-semibold text-on-surface">2D 角色立繪</div>
+<div class="font-label-sm text-[0.7rem] text-tertiary mt-1">體態輪廓 · 服飾細節 · 情感刻畫</div>
+</div>
+<div class="p-4 bg-surface-container-low border border-outline-variant/40 rounded">
+<div class="text-secondary mb-2">
+<span class="material-symbols-outlined text-[24px]">landscape</span>
+</div>
+<div class="font-title-md text-sm font-semibold text-on-surface">場景概念氛圍</div>
+<div class="font-label-sm text-[0.7rem] text-tertiary mt-1">世界觀架構 · 景深調度 · 留白意境</div>
+</div>
+<div class="p-4 bg-surface-container-low border border-outline-variant/40 rounded">
+<div class="text-primary mb-2">
+<span class="material-symbols-outlined text-[24px]">wb_sunny</span>
+</div>
+<div class="font-title-md text-sm font-semibold text-on-surface">線條光影美學</div>
+<div class="font-label-sm text-[0.7rem] text-tertiary mt-1">精確線稿 · 墨色層次 · 高端質感</div>
+</div>
+<div class="p-4 bg-surface-container-low border border-outline-variant/40 rounded">
+<div class="text-secondary mb-2">
+<span class="material-symbols-outlined text-[24px]">movie</span>
+</div>
+<div class="font-title-md text-sm font-semibold text-on-surface">動態分鏡腳本</div>
+<div class="font-label-sm text-[0.7rem] text-tertiary mt-1">鏡頭敘事 · 動態張力 · 節奏掌握</div>
+</div>
+</div>
+<!-- Software Proficiency Progress Stack -->
+<div class="bg-surface-container-lowest p-6 border border-outline-variant/40 rounded">
+<h3 class="font-title-md text-sm font-semibold text-on-surface tracking-wider uppercase mb-5 flex items-center justify-between">
+<span>數位工具熟練度 / Tools</span>
+<span class="font-label-sm text-[0.65rem] text-tertiary font-normal">Industry Standard</span>
+</h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between font-label-md text-xs text-on-surface mb-1">
+<span>Photoshop (概念繪製 / 後期合成)</span>
+<span class="text-primary font-semibold">95%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-md text-xs text-on-surface mb-1">
+<span>Clip Studio Paint (線稿 / 角色立繪)</span>
+<span class="text-primary font-semibold">92%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-md text-xs text-on-surface mb-1">
+<span>Procreate (概念速寫 / 隨行草稿)</span>
+<span class="text-secondary font-semibold">88%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-md text-xs text-on-surface mb-1">
+<span>Blender (2D/3D Blockout 輔助透視)</span>
+<span class="text-secondary font-semibold">78%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 78%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Milestone Timeline (Columns 6-12) -->
+<div class="lg:col-span-7 lg:pl-6">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-widest mb-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Career Milestones &amp; Chronology
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-10">
+            創作履歷與重要節點
+          </h2>
+<!-- Vertical Timeline with Cinnabar Diamond Nodes -->
+<div class="relative pl-8 space-y-10 before:content-[''] before:absolute before:left-3 before:top-2 before:bottom-2 before:w-[1px] before:bg-outline-variant/60">
+<!-- Timeline Item 1 -->
+<div class="relative group">
+<!-- Diamond Node -->
+<span class="absolute -left-[27px] top-1.5 w-3 h-3 bg-primary text-on-primary rotate-45 flex items-center justify-center ring-4 ring-surface"></span>
+<div class="bg-surface-container-lowest p-6 border border-outline-variant/40 rounded transition-all duration-300 hover:border-outline">
+<div class="flex items-center justify-between mb-2">
+<span class="font-headline-md italic text-primary text-sm font-semibold">2024</span>
+<span class="px-2 py-0.5 bg-surface-container text-tertiary font-label-sm text-xs rounded">獨立發行</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">
+                  出版個人概念畫集《雲山墨記》
+                </h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                  獨立企劃、編撰並出版 160 頁全彩概念藝術集。全台獨立書店同步巡展，收錄逾 120 幅原創世界觀、角色三視圖與筆記草稿，兩週內首刷售罄。
+                </p>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative group">
+<span class="absolute -left-[27px] top-1.5 w-3 h-3 bg-secondary text-on-primary rotate-45 flex items-center justify-center ring-4 ring-surface"></span>
+<div class="bg-surface-container-lowest p-6 border border-outline-variant/40 rounded transition-all duration-300 hover:border-outline">
+<div class="flex items-center justify-between mb-2">
+<span class="font-headline-md italic text-secondary text-sm font-semibold">2022 - 2023</span>
+<span class="px-2 py-0.5 bg-surface-container text-tertiary font-label-sm text-xs rounded">手遊專案</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">
+                  知名東方幻想手遊《天境訣》主力角色原畫師
+                </h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                  主導主要登場角色群（SSR 級別）之概念發想、立繪設計與動態拆件監修。協同 3D 建模團隊制定貼圖與法線標準，確保原畫精緻度在引擎端百分之百還原。
+                </p>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative group">
+<span class="absolute -left-[27px] top-1.5 w-3 h-3 bg-primary text-on-primary rotate-45 flex items-center justify-center ring-4 ring-surface"></span>
+<div class="bg-surface-container-lowest p-6 border border-outline-variant/40 rounded transition-all duration-300 hover:border-outline">
+<div class="flex items-center justify-between mb-2">
+<span class="font-headline-md italic text-primary text-sm font-semibold">2021</span>
+<span class="px-2 py-0.5 bg-surface-container text-tertiary font-label-sm text-xs rounded">國際殊榮</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">
+                  亞洲數位插畫大賽 (Asia Digital Art Award) 金賞
+                </h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                  以作品《墨隱玄龍》榮獲年度金賞，評審團給予「完美融合宋代筆意與現代賽博機械線條，氣度非凡」的高度評價。
+                </p>
+</div>
+</div>
+<!-- Timeline Item 4 -->
+<div class="relative group">
+<span class="absolute -left-[27px] top-1.5 w-3 h-3 bg-tertiary text-on-primary rotate-45 flex items-center justify-center ring-4 ring-surface"></span>
+<div class="bg-surface-container-lowest p-6 border border-outline-variant/40 rounded transition-all duration-300 hover:border-outline">
+<div class="flex items-center justify-between mb-2">
+<span class="font-headline-md italic text-tertiary text-sm font-semibold">2019</span>
+<span class="px-2 py-0.5 bg-surface-container text-tertiary font-label-sm text-xs rounded">學術背景</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">
+                  國立藝術大學美術學系畢業 ‧ 主修水墨與膠彩
+                </h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                  奠定嚴謹之傳統造形、構圖、筆法與解剖素描基礎，於學士畢業展獲評審首獎，隨後轉入 2D 數位概念創作領域。
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTACT SECTION (聯絡方式) -->
+<section class="py-24 max-w-7xl mx-auto px-6 md:px-12" id="contact">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Direct Info Card & Socials (Columns 1-5) -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-widest mb-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              Inquiries &amp; Commissions
+            </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">
+              開創下一個視覺傳奇
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-8">
+              歡迎遊戲工作室、出版團隊、動畫前期開發或私人藏家委託合作。無論是長篇世界觀構想或是關鍵角色立繪，皆期待為您呈現獨特意境。
+            </p>
+<!-- Copyable Email Capsule -->
+<div class="p-4 bg-surface-container-lowest border border-outline-variant/60 rounded mb-8">
+<div class="font-label-sm text-xs text-tertiary uppercase tracking-wider mb-2">直通電子郵件 / Email</div>
+<div class="flex items-center justify-between gap-3">
+<span class="font-headline-md text-base md:text-lg text-on-surface font-medium select-all" id="email-address">
+                  contact@inkvision.art
+                </span>
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-xs rounded border border-outline-variant/40 transition-colors flex items-center gap-1.5 active:scale-95" onclick="copyEmail()" title="點擊複製信箱" type="button">
+<span class="material-symbols-outlined text-[16px]" id="copy-icon">content_copy</span>
+<span id="copy-text">複製</span>
+</button>
+</div>
+</div>
+<!-- Studio Location & Availability Status -->
+<div class="space-y-3 mb-8">
+<div class="flex items-center gap-3 text-on-surface-variant font-body-md text-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary">location_on</span>
+<span>工作室地點：台北 / 遠距全球協同創作 (Remote Global)</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-md text-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">event_available</span>
+<span>當前檔期：<strong class="text-on-surface font-medium">2025 年 Q2 起預約洽談中</strong></span>
+</div>
+</div>
+</div>
+<!-- Social Badges Row -->
+<div>
+<div class="font-label-sm text-xs text-tertiary uppercase tracking-widest mb-3">關注與作品平台 / Networks</div>
+<div class="flex items-center gap-3">
+<a class="p-3 bg-surface-container-lowest border border-outline-variant/50 rounded text-on-surface hover:text-primary hover:border-primary transition-all duration-200" href="#" title="ArtStation">
+<span class="font-label-sm font-bold text-xs">ArtStation</span>
+</a>
+<a class="p-3 bg-surface-container-lowest border border-outline-variant/50 rounded text-on-surface hover:text-primary hover:border-primary transition-all duration-200" href="#" title="Behance">
+<span class="font-label-sm font-bold text-xs">Behance</span>
+</a>
+<a class="p-3 bg-surface-container-lowest border border-outline-variant/50 rounded text-on-surface hover:text-primary hover:border-primary transition-all duration-200" href="#" title="Twitter / X">
+<span class="font-label-sm font-bold text-xs">Twitter / X</span>
+</a>
+<a class="p-3 bg-surface-container-lowest border border-outline-variant/50 rounded text-on-surface hover:text-primary hover:border-primary transition-all duration-200" href="#" title="Instagram">
+<span class="font-label-sm font-bold text-xs">Instagram</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Right Column: Flush Elegant Form (Columns 6-12) -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest p-8 md:p-10 border border-outline-variant/50 rounded shadow-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">傳遞委託訊息</h3>
+<p class="font-body-md text-sm text-on-surface-variant mb-8">請留下您的專案背景與需求概況，我將於 24 小時之內親自回信確認。</p>
+<form class="space-y-6" id="contact-form" onsubmit="handleFormSubmit(event)">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Name -->
+<div class="relative">
+<label class="block font-label-md text-xs text-tertiary mb-2 uppercase tracking-wider" for="name">貴姓大名 (Name) *</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/70 focus:border-primary focus:ring-0 px-0 py-2.5 font-body-md text-on-surface placeholder:text-outline-variant/50 transition-colors" id="name" placeholder="例如：林語堂 / 創角製作人" required="" type="text"/>
+</div>
+<!-- Email -->
+<div class="relative">
+<label class="block font-label-md text-xs text-tertiary mb-2 uppercase tracking-wider" for="email">電子信箱 (Email) *</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/70 focus:border-primary focus:ring-0 px-0 py-2.5 font-body-md text-on-surface placeholder:text-outline-variant/50 transition-colors" id="email" placeholder="your.name@company.com" required="" type="email"/>
+</div>
+</div>
+<!-- Subject / Project Type -->
+<div class="relative">
+<label class="block font-label-md text-xs text-tertiary mb-2 uppercase tracking-wider" for="subject">合作項目 / 主旨 (Subject) *</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant/70 focus:border-primary focus:ring-0 px-0 py-2.5 font-body-md text-on-surface transition-colors" id="subject" required="">
+<option disabled="" selected="" value="">請選擇合作性質</option>
+<option value="game">遊戲專案概念原畫 / 角色立繪設定</option>
+<option value="book">書籍封面與出版品插畫委託</option>
+<option value="animation">動畫 / 影視前期世界觀氛圍稿</option>
+<option value="gallery">藝術展覽邀約與畫作典藏</option>
+<option value="other">其他商業品牌專案洽談</option>
+</select>
+</div>
+<!-- Message -->
+<div class="relative">
+<label class="block font-label-md text-xs text-tertiary mb-2 uppercase tracking-wider" for="message">專案細節與訊息 (Message) *</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/70 focus:border-primary focus:ring-0 px-0 py-2.5 font-body-md text-on-surface placeholder:text-outline-variant/50 transition-colors resize-none" id="message" placeholder="請簡述您的專案時程、預期畫作數量、風格參考與預算範疇..." required="" rows="4"></textarea>
+</div>
+<!-- Submit button & response container -->
+<div class="pt-4 flex items-center justify-between flex-wrap gap-4">
+<button class="px-9 py-3.5 bg-primary text-on-primary font-label-md text-label-md rounded border border-primary hover:bg-primary-container transition-all duration-300 active:scale-95 shadow-sm flex items-center gap-2" id="submit-btn" type="submit">
+<span>送出洽詢</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<div class="hidden font-body-md text-sm text-primary flex items-center gap-2" id="form-feedback">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>訊息已送出！感謝您的洽詢，我將盡快回覆。</span>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Architectural Deployment Readiness Indicator -->
+<div class="mt-16 p-4 bg-surface-container-low border border-outline-variant/40 rounded flex flex-col sm:flex-row items-center justify-between text-xs text-tertiary gap-3">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+<span class="font-mono uppercase tracking-wider">架構狀態：靜態部署 (Static Architecture on Render) ‧ Ready</span>
+</div>
+<div class="flex items-center gap-4 font-mono text-[0.7rem]">
+<span>RENDER SPEC: PASS</span>
+<span>RESPONSIVE ENGINE: CSS v3</span>
+<span>AESTHETIC: 東方留白 × 數位概念</span>
+</div>
+</div>
+</section>
+</main>
+<!-- LIGHTBOX MODAL (Full Viewport Gallery Preview) -->
+<div class="fixed inset-0 z-50 hidden bg-inverse-surface/90 backdrop-blur-md flex items-center justify-center p-4 md:p-10 transition-opacity duration-300 opacity-0 pointer-events-none" id="lightbox-modal">
+<div class="relative max-w-5xl w-full bg-surface-container-lowest border border-outline-variant/40 rounded overflow-hidden shadow-2xl flex flex-col lg:flex-row max-h-[921px]">
+<!-- Close Button -->
+<button class="absolute top-4 right-4 z-10 p-2 bg-surface/80 rounded-full text-on-surface hover:text-primary transition-colors" onclick="closeLightbox()">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+<!-- Lightbox Image Container -->
+<div class="lg:w-2/3 bg-surface-container flex items-center justify-center p-4 overflow-hidden relative">
+<img class="max-h-[768px] w-auto object-contain mx-auto transition-transform duration-300" data-alt="Expanded high-resolution view of the 2D digital artwork with fine brush strokes, delicate gradient transitions, and intricate design details on display in museum lighting." id="lightbox-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA94aaBh6RU9_6gw9oic8ehWnU-rPDJJOYxZZY0MoWPisoiAuMQnMGFDZAtGbfc97_PNux_Zuaym1zMJd6PPgAxP4MOs5P7GYwWEi5AKAXxGySX7QxalGOWp36Jcs4vV44-XjZkiOf5IwFlMQA9d2nArlQFQIgRukUEyOGWYkMzF3UEXwLlhGbj4SNJkMmw3lvrQKefiysGOgB0az6CrQhAsiLs1sE-9wq1ER4wzA"/>
+</div>
+<!-- Lightbox Details Drawer -->
+<div class="lg:w-1/3 p-6 md:p-8 flex flex-col justify-between overflow-y-auto bg-surface-container-lowest">
+<div>
+<span class="font-label-sm text-xs text-primary uppercase tracking-widest font-semibold" id="lightbox-category">
+            Character Concept
+          </span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1 mb-3" id="lightbox-title">
+            作品標題
+          </h3>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6" id="lightbox-desc">
+            概念詳細描述與構思思路。
+          </p>
+<div class="space-y-3 border-t border-outline-variant/30 pt-4">
+<div class="flex justify-between text-xs">
+<span class="text-tertiary">完成年份</span>
+<span class="font-medium text-on-surface" id="lightbox-year">2024</span>
+</div>
+<div class="flex justify-between text-xs">
+<span class="text-tertiary">使用軟體</span>
+<span class="font-medium text-on-surface" id="lightbox-tools">Clip Studio Paint, Photoshop</span>
+</div>
+<div class="flex justify-between text-xs">
+<span class="text-tertiary">畫作分辨率</span>
+<span class="font-mono text-on-surface">5400 × 7200 px (300 DPI)</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-label-sm text-[0.65rem] text-tertiary">© 墨韻 InkVision 作品著作權所有</span>
+<button class="px-4 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-xs rounded transition-colors" onclick="closeLightbox()">
+            關閉檢視
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer (Shared Component JSON Conformance) -->
+<footer class="w-full bg-surface-container-low border-t border-outline-variant/30">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+<!-- Brand & Philosophy in Footer -->
+<div class="flex flex-col items-center md:items-start">
+<span class="font-title-md text-title-md tracking-wider text-on-surface">
+          墨韻 / InkVision
+        </span>
+<p class="font-body-md text-body-md text-tertiary text-xs mt-1 text-center md:text-left">
+          © 2025 墨韻 InkVision. All Rights Reserved. 雅致留白・以筆墨與數位勾勒視界.
+        </p>
+</div>
+<!-- Footer Navigation Links -->
+<div class="flex flex-wrap items-center justify-center gap-6 font-label-sm text-label-sm">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#works">
+          全部作品 All Works
+        </a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#about">
+          簡歷備份 Resume
+        </a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#contact">
+          隱私條款 Privacy
+        </a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#contact">
+          藝廊條款 Terms
+        </a>
+</div>
+<!-- Return to top subtle trigger -->
+<div>
+<a class="p-2.5 bg-surface-container border border-outline-variant/40 rounded text-on-surface hover:text-primary transition-colors flex items-center gap-1 font-label-sm text-xs" href="#" title="返回頂部">
+<span class="material-symbols-outlined text-[18px]">north</span>
+<span>頁首</span>
+</a>
+</div>
+</div>
+</footer>
+<!-- Micro-interactions & Gallery / Form Scripts -->
+<script>
+    // Lightbox Database Data
+    const artworkData = [
+      {
+        title: "《鶴歸錄》‧ 劍隱青翎",
+        category: "角色設計 / Character Design",
+        year: "2024",
+        tools: "Clip Studio Paint, Photoshop",
+        desc: "手遊主角原案設定，旨在兼顧東方武俠輪廓與次世代俐落裁縫。線條以松煙墨色為主軸，保留了傳統工筆勾勒之細緻感。"
+      },
+      {
+        title: "《懸闕行》‧ 雲中觀瀾",
+        category: "概念原畫 / Concept Art",
+        year: "2024",
+        tools: "Blender, Photoshop",
+        desc: "仙俠世界觀宏觀場景概念，以 3D 快速搭建懸崖殿宇之空間透視，隨後深入運用水墨渲染塗抹，展現無垠雲海與殿宇之間的留白意象。"
+      },
+      {
+        title: "《秋窗讀易圖》‧ 詩意典藏",
+        category: "數位插畫 / Digital Art",
+        year: "2023",
+        tools: "Procreate, Photoshop",
+        desc: "個人畫集收錄之主視覺插圖。以室內窗欞將畫面劃分虛實，冷色秋夜竹影襯托室內溫暖燭光，呈現沉靜治癒的讀書氛圍。"
+      },
+      {
+        title: "《機神封魔》‧ 巫祝靈樞",
+        category: "角色設計 / Character Design",
+        year: "2023",
+        tools: "Clip Studio Paint, Illustrator",
+        desc: "融合賽博機械與道家符籙的商業三視圖專案。針對模型貼圖規範進行色彩編碼，確保設定稿能兼備設計美感與研發實施性。"
+      },
+      {
+        title: "《碧淵遺廟》‧ 水下神域",
+        category: "概念原畫 / Concept Art",
+        year: "2023",
+        tools: "Photoshop, Procreate",
+        desc: "探索水下折射光影與古蹟青苔交織之世界觀概念。冷調墨綠營造幽遠寂靜的神秘感，引導觀者視線穿過鳥居。"
+      },
+      {
+        title: "《月弧破陣》‧ 宿命夜獵",
+        category: "數位插畫 / Digital Art",
+        year: "2022",
+        tools: "Clip Studio Paint, Photoshop",
+        desc: "展現高張力動態的商業宣傳主視覺。利用松樹枝椏與破空光箭的對角線構圖，強化獵手蓄勢待發的瞬間張力。"
+      }
+    ];
+
+    // Filter interaction
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const artCards = document.querySelectorAll('.art-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle active button style
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'border', 'border-outline-variant/30');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('active', 'bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'border', 'border-outline-variant/30');
+        btn.classList.remove('text-on-surface-variant');
+
+        const filter = btn.getAttribute('data-filter');
+        artCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Lightbox Functionality
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxCategory = document.getElementById('lightbox-category');
+    const lightboxYear = document.getElementById('lightbox-year');
+    const lightboxTools = document.getElementById('lightbox-tools');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+
+    function openLightbox(index) {
+      const data = artworkData[index];
+      if (!data) return;
+
+      lightboxTitle.textContent = data.title;
+      lightboxCategory.textContent = data.category;
+      lightboxYear.textContent = data.year;
+      lightboxTools.textContent = data.tools;
+      lightboxDesc.textContent = data.desc;
+
+      lightboxModal.classList.remove('hidden');
+      setTimeout(() => {
+        lightboxModal.classList.remove('opacity-0', 'pointer-events-none');
+      }, 10);
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.add('opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        lightboxModal.classList.add('hidden');
+      }, 300);
+    }
+
+    // Close on backdrop click
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) {
+        closeLightbox();
+      }
+    });
+
+    // One-click Copy Email Capsule
+    function copyEmail() {
+      const email = document.getElementById('email-address').textContent.trim();
+      navigator.clipboard.writeText(email).then(() => {
+        const copyText = document.getElementById('copy-text');
+        const copyIcon = document.getElementById('copy-icon');
+        copyText.textContent = "已複製！";
+        copyIcon.textContent = "done";
+        setTimeout(() => {
+          copyText.textContent = "複製";
+          copyIcon.textContent = "content_copy";
+        }, 2200);
+      });
+    }
+
+    // Interactive Form Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submit-btn');
+      const feedback = document.getElementById('form-feedback');
+
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-70');
+      submitBtn.innerHTML = `<span>傳送中...</span>`;
+
+      setTimeout(() => {
+        submitBtn.innerHTML = `<span>已成功送出</span><span class="material-symbols-outlined text-[18px]">check</span>`;
+        submitBtn.classList.remove('bg-primary');
+        submitBtn.classList.add('bg-secondary', 'border-secondary');
+        feedback.classList.remove('hidden');
+        document.getElementById('contact-form').reset();
+      }, 900);
+    }
+
+    // Theme Mode Toggle (Light / Gentle Tonal Shift demo)
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      themeToggle.querySelector('.material-symbols-outlined').textContent = isDark ? 'light_mode' : 'dark_mode';
+    });
+  </script>
+</body></html>

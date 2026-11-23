@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+  .seal-stamp {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  }
+  .paper-texture {
+    background-color: #FAF9F6;
+    background-image: radial-gradient(rgba(32, 32, 32, 0.02) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+}
+
+/* Dark mode smooth tuning */
+.dark .paper-texture {
+  background-color: #1a1a1a;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+/* Custom Scrollbar for elegant feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0eded;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #252525;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dfbfbd;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b83b3b;
+}
